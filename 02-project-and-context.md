@@ -1,5 +1,7 @@
 # 项目初始化与上下文
 
+> 阅读提示：如果你刚建立完 Claude Code 的基本认知，建议先读 [概览与安装](./01-overview-and-setup.md)；如果你想先理解这整条主线最终会如何汇总成 harness 方法论，可以对照阅读 [Claude Code 的 Harness Engineering 总纲](./06-harness-engineering-guide.md)。
+
 ## 包含章节
 
 - Claude Code 项目初始化

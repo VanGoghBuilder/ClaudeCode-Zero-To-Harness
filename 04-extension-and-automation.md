@@ -1,5 +1,7 @@
 # 扩展、自动化与高级能力
 
+> 阅读提示：本章更适合在你已经理解了项目上下文和日常协作节奏之后再进入；如果你想先建立从基础使用到 harness 的整体地图，先读 [Claude Code：从 Zero 到 Harness](./00-zero-to-harness.md)，再结合 [Claude Code 的 Harness Engineering 总纲](./06-harness-engineering-guide.md) 理解这些能力在系统中的位置。
+
 ## 包含章节
 
 - Claude Code MCP

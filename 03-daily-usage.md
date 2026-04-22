@@ -1,5 +1,7 @@
 # 日常使用与交互
 
+> 阅读提示：如果你还没有建立 Claude Code 的基本定位，建议先读 [概览与安装](./01-overview-and-setup.md)；如果你想先理解为什么这些日常协作习惯最后会进入 harness，可以对照阅读 [Claude Code：从 Zero 到 Harness](./00-zero-to-harness.md) 和 [Claude Code 的 Harness Engineering 总纲](./06-harness-engineering-guide.md)。
+
 ## 包含章节
 
 - Claude Code 交互模式

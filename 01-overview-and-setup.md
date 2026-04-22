@@ -1,5 +1,7 @@
 # 概览与安装
 
+> 阅读提示：如果你想先建立“为什么 Claude Code 会走向 harness”的整体地图，先读 [Claude Code：从 Zero 到 Harness](./00-zero-to-harness.md)；如果你已经准备开始把 Claude Code 放进真实项目，读完本章后继续看 [项目初始化与上下文](./02-project-and-context.md)。
+
 ## 包含章节
 
 - Claude Code 教程

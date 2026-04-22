@@ -1,5 +1,7 @@
 # 参考、环境与工程集成
 
+> 阅读提示：本章更适合在你已经理解了项目上下文、日常交互和扩展能力之后再查阅；如果你想把前面几卷重新汇总成一套 Harness Engineering 视角，继续读 [Claude Code 的 Harness Engineering 总纲](./06-harness-engineering-guide.md)。
+
 ## 包含章节
 
 - Claude Code CLI 参考手册
