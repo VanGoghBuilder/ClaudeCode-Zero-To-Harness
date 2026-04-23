@@ -1491,9 +1491,7 @@ export CLAUDE_CODE_DISABLE_AUTO_MEMORY=1
 这是一个隐藏的效率神器：
 
 ~~~
-
 # 始终在函数参数中使用具名参数（named parameters）
-
 ~~~
 
 按下 `#` 键，输入你想记住的内容，按回车——Claude Code 会自动将其写入对应的 CLAUDE.md 文件。非常适合：
