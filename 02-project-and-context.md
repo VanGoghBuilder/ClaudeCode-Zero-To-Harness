@@ -1681,12 +1681,14 @@ claude --permission-mode bypassPermissions
 
 ### 实例
 
+```json
 {
-"permissions": {
-"allow": ["Bash", "WebFetch", "Read"],
-"deny": ["Edit"]
+  "permissions": {
+    "allow": ["Bash", "WebFetch", "Read"],
+    "deny": ["Edit"]
+  }
 }
-}
+```
 
 #### 2、匹配所有工具使用
 
