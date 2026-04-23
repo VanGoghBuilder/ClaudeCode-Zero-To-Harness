@@ -1066,7 +1066,7 @@ setx ANTHROPIC_BASE_URL "https://coding.dashscope.aliyuncs.com/apps/anthropic"
 setx ANTHROPIC_MODEL "qwen3-coder-plus"
 ~~~
 
-用套餐专属 API Key 替换 YOUR_API_KEY。
+用百炼 API Key 替换 YOUR_API_KEY。
 打开一个新的 CMD 窗口，运行以下命令，检查环境变量是否生效。
 
 ~~~
