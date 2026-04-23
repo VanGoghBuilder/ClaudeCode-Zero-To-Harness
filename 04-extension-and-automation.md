@@ -2229,14 +2229,19 @@ def _internal_get_discount(user_score):
 
 在上一章节 [Agent Skills（智能体技能）](https://www.runoob.com/claude-code/claude-agent-skills.html) 中我们已经了解了 Skills 的基本概念，本章节我们将结合一个具体的 Skills 来开发一个项目。
 
-> 现在市面上已经有很多现成的 skills，我么可以直接拿来使用，我们可以在 [https://skills.sh/](https://skills.sh/) 查找更多的 skill。
+> 现在市面上已经有很多现成的 skills，我们可以直接拿来使用，也可以在 [https://skills.sh/](https://skills.sh/) 查找更多 skill。
+>
 > 安装方式：
+>
 > ~~~
 > npx skills add <owner/repo>
-> ~~~npx 安装 ui-ux-pro-max 可参考：[OpenCode skills 使用](https://www.runoob.com/ai-agent/opencode-skills-intro.html)。
-> **注： **如果对 npx 不了解，可以参阅：[npx 入门教程](https://www.runoob.com/nodejs/npx-intro.html)
+> ~~~
+>
+> 安装 `ui-ux-pro-max` 时也可以参考：[OpenCode skills 使用](https://www.runoob.com/ai-agent/opencode-skills-intro.html)。
+>
+> **注：** 如果对 npx 不熟悉，可以参阅：[npx 入门教程](https://www.runoob.com/nodejs/npx-intro.html)
 
-本章节我们将介绍一个支持多平台、多框架的专业级 UI/UX SKILL 插件 - UI UX Pro Max。
+本章节我们将介绍一个支持多平台、多框架的专业级 UI/UX Skill 插件：UI UX Pro Max。
 
 UI UX Pro Max 旨在为跨平台和多框架开发提供专业的 UI/UX 设计智能支持。
 
