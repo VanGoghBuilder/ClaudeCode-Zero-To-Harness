@@ -1647,23 +1647,17 @@ hooks:
 
 # 匹配器：拦截Edit（编辑）或Write（写入）工具
 
-- matcher: "Edit|Write"
+```yaml
+hooks:
+  PreToolUse:
+    - matcher: "Edit|Write"
       hooks:
-- type: "command"
-
-# 代码检查脚本，执行lint校验
-
+        - type: "command"
           command: "./scripts/run-linter.sh"
-
-# 超时时间（秒）
-
           timeout: 30
+```
 
----
-
-~~~
-
-**注意事项： **
+**注意事项：**
 
 1. 组件内 Hooks 的匹配器规则与全局 Hooks 完全一致：支持精确匹配（如 `"Write"`）、多工具匹配（如 `"Edit|Write"`）、通配匹配（`"*"`），且区分大小写；
 2. 组件内 Hooks 与全局 Hooks 会并行执行：若全局和组件内同时配置了针对同一事件的 Hooks，触发时两类 Hooks 会一起运行，互不冲突；
