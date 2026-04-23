@@ -1078,7 +1078,7 @@ echo %ANTHROPIC_MODEL%
 在 PowerShell 中运行以下命令，设置环境变量：
 
 ~~~
-# 用套餐专属 API Key 替换 YOUR_API_KEY
+# 用百炼 API Key 替换 YOUR_API_KEY
 [Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "YOUR_API_KEY", [EnvironmentVariableTarget]::User)
 [Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://coding.dashscope.aliyuncs.com/apps/anthropic", [EnvironmentVariableTarget]::User)
 [Environment]::SetEnvironmentVariable("ANTHROPIC_MODEL", "qwen3-coder-plus", [EnvironmentVariableTarget]::User)
