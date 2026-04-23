@@ -2122,22 +2122,24 @@ Claude Code 的设置按以下优先级生效（从高到低）：
 
 ### 实例
 
+```json
 {
-"permissions": {
-"allow": [
-"Edit(/src/**)", // 允许编辑 src 目录
-"Edit(/docs/**)" // 允许编辑文档目录
-],
-"deny": [
-"Edit(/docs/**/*.md)" // 禁止编辑文档文件（只读）
-]
-},
-"additionalDirectories": [
-"~/projects/personal/**", // 允许访问个人项目
-"~/projects/work/**", // 允许访问工作项目
-"~/dotfiles/**" // 允许访问配置文件
-]
+  "permissions": {
+    "allow": [
+      "Edit(/src/**)",
+      "Edit(/docs/**)"
+    ],
+    "deny": [
+      "Edit(/docs/**/*.md)"
+    ]
+  },
+  "additionalDirectories": [
+    "~/projects/personal/**",
+    "~/projects/work/**",
+    "~/dotfiles/**"
+  ]
 }
+```
 
 #### 示例五：使用沙箱限制 Bash 操作
 
