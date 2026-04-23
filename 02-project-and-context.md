@@ -931,7 +931,7 @@ Claude 读取 `CLAUDE.md` 时会自动加载引用的文件内容：
 
 ### 实例
 
-```md
+~~~md
 # MyApp — 电商管理后台
 
 基于 Next.js 14 App Router + Prisma + PostgreSQL 的电商管理系统。
