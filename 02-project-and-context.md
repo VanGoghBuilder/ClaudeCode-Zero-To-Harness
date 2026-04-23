@@ -2147,27 +2147,29 @@ Claude Code 的设置按以下优先级生效（从高到低）：
 
 ### 实例
 
+```json
 {
-"sandbox": {
-"enabled": true,
-"filesystem": {
-"allowWrite": ["/tmp/build", "~/projects/myapp/**"],
-"denyRead": ["~/secrets/**"]
-},
-"network": {
-"httpProxyPort": 8080
+  "sandbox": {
+    "enabled": true,
+    "filesystem": {
+      "allowWrite": ["/tmp/build", "~/projects/myapp/**"],
+      "denyRead": ["~/secrets/**"]
+    },
+    "network": {
+      "httpProxyPort": 8080
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "WebFetch(domain:api.github.com)"
+    ],
+    "deny": [
+      "WebFetch(domain:untrusted.com)"
+    ]
+  }
 }
-},
-"permissions": {
-"allow": [
-"Bash(*)", // 沙箱内允许所有命令
-"WebFetch(domain:api.github.com)"
-],
-"deny": [
-"WebFetch(domain:untrusted.com)"
-]
-}
-}
+```
 
 ---
 
