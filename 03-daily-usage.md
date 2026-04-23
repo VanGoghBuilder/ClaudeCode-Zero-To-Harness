@@ -1657,15 +1657,12 @@ MCP（模型上下文协议）服务器可以把外部工具（比如 GitHub、J
 
 智能 Git 提交：
 
-~~~
-
+```md
 ---
-
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git diff:*), Bash(git commit:*)
 argument-hint: [commit-message]
 description: 检查代码质量后提交
 model: claude-haiku-4-5-20251001
-
 ---
 
 ## 暂存区内容
@@ -1679,17 +1676,14 @@ model: claude-haiku-4-5-20251001
 4. 测试文件中的 `.only` / `.skip` 标记
 
 若无问题，使用以下信息提交：$ARGUMENTS
-~~~
+```
 
 PR 代码审查：
 
-~~~
-
+```md
 ---
-
 allowed-tools: Read, Grep, Glob, Bash(git diff:*), Bash(git log:*)
 description: 全面的 PR 代码审查
-
 ---
 
 ## 变更文件
@@ -1706,18 +1700,15 @@ description: 全面的 PR 代码审查
 
 按 Critical / Major / Minor 三级优先级输出审查结果，涵盖：
 代码逻辑与可读性、安全漏洞、性能隐患（N+1 查询）、测试覆盖率、文档完整性
-~~~
+```
 
 智能测试运行：
 
-~~~
-
+```md
 ---
-
 allowed-tools: Bash, Read, Edit
 argument-hint: [test-pattern]
 description: 运行测试并自动修复失败用例
-
 ---
 
 运行匹配 "$ARGUMENTS" 的测试：
@@ -1727,18 +1718,15 @@ description: 运行测试并自动修复失败用例
 4. 重新运行验证修复
 
 不提供参数则运行全量测试并输出覆盖率报告。
-~~~
+```
 
 安全漏洞扫描：
 
-~~~
-
+```md
 ---
-
 allowed-tools: Read, Grep, Glob
 description: OWASP Top 10 安全漏洞扫描
 model: claude-opus-4-6
-
 ---
 
 以安全工程师视角审查代码库：
@@ -1748,18 +1736,15 @@ model: claude-opus-4-6
 低危：缺失安全响应头、错误信息暴露内部细节
 
 输出格式：漏洞位置 + 危险级别 + 修复建议代码示例
-~~~
+```
 
 API 文档生成：
 
-~~~
-
+```md
 ---
-
 allowed-tools: Read, Glob, Edit
 argument-hint: [输出文件路径]
 description: 自动生成 REST API 文档
-
 ---
 
 扫描 @src/routes/ 和 @src/controllers/，为所有端点生成 Markdown 文档：
@@ -1770,41 +1755,35 @@ description: 自动生成 REST API 文档
 - curl 调用示例
 
 保存到：$ARGUMENTS（默认：docs/api.md）
-~~~
+```
 
 代码重构：
 
-~~~
-
+```md
 ---
-
 allowed-tools: Read, Edit, Glob
 argument-hint: [目标文件或目录]
 description: 代码质量重构
-
 ---
 
 对 $ARGUMENTS 进行重构，遵循原则：
-- 可读性：变量/函数命名语义化，消除魔法数字
+- 可读性：变量 / 函数命名语义化，消除魔法数字
 - DRY 原则：提取重复逻辑为复用函数
 - 单一职责：拆分超过 50 行的函数
 - 错误处理：完善异常捕获和错误边界
 - TypeScript：消除 `any` 类型，补全类型注解
 
 重构前先输出变更计划，确认后再执行。
-~~~
+```
 
 文档链接检查：
 
-~~~
-
+```md
 ---
-
 allowed-tools: Read, Bash, WebFetch
 argument-hint: [文档文件路径]
 description: 检查文档中的链接是否全部有效
 model: claude-haiku-4-5-20251001
-
 ---
 
 读取 $ARGUMENTS 文件，提取所有超链接（http/https），逐一请求并检查响应状态码。
@@ -1815,24 +1794,24 @@ model: claude-haiku-4-5-20251001
 - 失效链接（4xx/5xx）及建议替代链接
 
 最后输出汇总：共 N 个链接，M 个失效。
-~~~
+```
 
 ---
 
 ### 附：配置文件说明
 
- 建议：将 CLAUDE.local.md 和 .claude/settings.local.json 加入 .gitignore，避免个人偏好影响团队成员。
+建议将 `CLAUDE.local.md` 和 `.claude/settings.local.json` 加入 `.gitignore`，避免个人偏好影响团队成员。
 
 | 文件 / 目录 | 作用 | 版本控制 |
 | --- | --- | --- |
 | `CLAUDE.md` | 项目级共享指令（技术栈、构建命令、编码规范等） | 纳入 git |
-| `CLAUDE.local.md` NEW | 个人私有指令（个人偏好，不共享给团队） | 加入 .gitignore |
+| `CLAUDE.local.md` | 个人私有指令（个人偏好，不共享给团队） | 加入 `.gitignore` |
 | `~/.claude/CLAUDE.md` | 全局指令，所有项目通用 | — |
 | `.claude/settings.json` | 项目共享配置（工具权限、hooks 等） | 纳入 git |
-| `.claude/settings.local.json` | 项目个人配置（覆盖 settings.json，不共享） | 加入 .gitignore |
-| `.claude/skills/` 推荐 | 项目级自定义 Skills（新推荐格式） | 纳入 git |
-| `.claude/commands/` 旧格式 | 项目级自定义命令（旧格式，仍完全兼容） | 纳入 git |
-| `~/.claude/skills/` | 个人全局 Skills（跨项目通用，本地私有） | — |
+| `.claude/settings.local.json` | 项目个人配置（覆盖 `settings.json`，不共享） | 加入 `.gitignore` |
+| `.claude/skills/` | 项目级自定义 Skills | 纳入 git |
+| `.claude/commands/` | 项目级自定义命令（旧格式） | 纳入 git |
+| `~/.claude/skills/` | 个人全局 Skills | — |
 
 ---
 
@@ -1842,7 +1821,7 @@ model: claude-haiku-4-5-20251001
 
 它最适合解决这样的问题：
 
-- 你不只想让 Claude Code “会写代码”，还希望它“按某种方式回复”
+- 你不只想让 Claude Code“会写代码”，还希望它“按某种方式回复”
 - 你想让它更偏解释型、教学型，或适配某类非工程任务
 - 你希望不同项目拥有不同的交互风格
 
@@ -1884,32 +1863,26 @@ Claude Code 提供 3 种开箱即用的输出样式：
 
 最直接的方法是在 Claude Code 中执行：
 
-~~~
+```text
 /output-style
-~~~
+```
 
 然后在菜单里选择目标样式。
 
 也可以直接指定：
 
-~~~
+```text
 /output-style explanatory
-~~~
-
-~~~
 /output-style learning
-~~~
-
-~~~
 /output-style default
-~~~
+```
 
 除了命令切换，也可以直接修改配置文件中的 `outputStyle` 字段：
 
 - 项目级：`.claude/settings.local.json`
 - 全局级：`~/.claude/settings.json`
 
-通常项目级更适合实验和团队协作，全局级更适合你长期固定使用的风格。
+通常项目级更适合实验和团队协作，全局级更适合长期固定使用的风格。
 
 ---
 
@@ -1933,7 +1906,7 @@ Claude Code 提供 3 种开箱即用的输出样式：
 
 下面是一份更适合直接照着改的示例：
 
-~~~
+```md
 ---
 name: data-analyst
 description: 专注将复杂数据转化为可视化报告和分析结论
@@ -1961,14 +1934,14 @@ keep-coding-instructions: false
 
 1. 遇到缺失数据时，先提示用户补充关键信息，而不是直接报错
 2. 生成图表时，默认使用中文标签和浅色主题
-~~~
+```
 
 #### 3、frontmatter 参数
 
 | 参数名 | 是否必填 | 说明 | 默认值 |
 | --- | --- | --- | --- |
 | `name` | 否 | 显示在 `/output-style` 菜单中的样式名称 | 文件名 |
-| `description` | 否 | 样式用途说明，帮助你在菜单中区分 | 无 |
+| `description` | 否 | 样式用途说明 | 无 |
 | `keep-coding-instructions` | 否 | 是否保留默认编码相关指令 | `false` |
 
 #### 4、推荐使用步骤
@@ -1984,16 +1957,16 @@ keep-coding-instructions: false
 
 ### 五、它和其他机制有什么区别
 
-输出样式看起来很像 `CLAUDE.md`、自定义命令或者子代理，但它们的作用层次不一样。
+输出样式看起来很像 `CLAUDE.md`、自定义命令或者子代理，但作用层次并不一样。
 
 | 对比对象 | 关键区别 |
 | --- | --- |
-| **输出样式 vs CLAUDE.md** | 输出样式改变的是系统提示层的交互风格；`CLAUDE.md` 提供的是项目背景、约定和上下文 |
-| **输出样式 vs --append-system-prompt** | 输出样式是整体切换风格；`--append-system-prompt` 更像是在默认提示后面追加一段要求 |
-| **输出样式 vs 子代理（Subagent）** | 输出样式影响主代理整体回复方式；子代理是为特定任务设计的独立角色 |
-| **输出样式 vs 自定义斜杠命令** | 输出样式决定“怎么说”；斜杠命令决定“做什么事” |
+| **输出样式 vs CLAUDE.md** | 输出样式改变交互风格；`CLAUDE.md` 提供项目背景、约定和上下文 |
+| **输出样式 vs --append-system-prompt** | 输出样式是整体切换风格；`--append-system-prompt` 是追加要求 |
+| **输出样式 vs 子代理（Subagent）** | 输出样式影响主代理整体回复方式；子代理是针对特定任务的独立角色 |
+| **输出样式 vs 自定义斜杠命令** | 输出样式决定“怎么说”；斜杠命令决定“做什么” |
 
-一个简单判断方式是：
+一个简单判断方式：
 
 - 你想改变 Claude 的整体说话风格和响应结构，用 **输出样式**
 - 你想给项目增加背景和规则，用 **CLAUDE.md**
@@ -2006,7 +1979,7 @@ keep-coding-instructions: false
 
 如果你只是想快速做一个自己的输出样式，可以从这个模板开始：
 
-~~~
+```md
 ---
 name: [样式名称]
 description: [一句话说明用途]
@@ -2033,7 +2006,7 @@ keep-coding-instructions: [true 或 false]
 
 1. [特殊情况 1]
 2. [特殊情况 2]
-~~~
+```
 
 如果你不确定从哪里开始，最稳的办法是：
 
