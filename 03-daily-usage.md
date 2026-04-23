@@ -1593,13 +1593,13 @@ hooks:
 
 ### 七、插件与 MCP 命令
 
-除了自己写，还能通过 **插件**和 **MCP 服务器**获取更多扩展命令。
+除了自己写，还能通过 **插件** 和 **MCP 服务器**获取更多扩展命令。
 
 命名格式：
 
-~~~
+```text
 /mcp__<服务器名>__<命令名> [参数]
-~~~
+```
 
 #### 常用 MCP 命令示例
 
@@ -1618,9 +1618,9 @@ hooks:
 
 安装 Claude Code 插件后，会自动新增插件专属命令，格式通常是：
 
-~~~
-/plugin-name:command-name  # 避免命令名冲突
-~~~
+```text
+/plugin-name:command-name
+```
 
 比如安装 Git 插件后，可能会有 `/git:commit` 命令，一键生成规范的 commit 信息。
 
@@ -1628,16 +1628,16 @@ hooks:
 
 MCP（模型上下文协议）服务器可以把外部工具（比如 GitHub、Jira）的功能变成斜杠命令，格式：
 
-~~~
+```text
 /mcp__<服务器名>__<功能名> [参数]
-~~~
+```
 
 示例：
 
-~~~
-/mcp__github__list_prs  # 列出 GitHub 仓库的 PR
-/mcp__jira__create_issue "登录按钮失效" high  # 在 Jira 创建高优先级问题
-~~~
+```text
+/mcp__github__list_prs
+/mcp__jira__create_issue "登录按钮失效" high
+```
 
 ---
 
