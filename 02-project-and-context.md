@@ -2013,6 +2013,7 @@ PreToolUse hooks 在权限提示之前运行，可以：
 
 ### 实例
 
+```bash
 #!/bin/bash
 
 # PreToolUse hook 示例：拦截危险命令
@@ -2020,10 +2021,12 @@ PreToolUse hooks 在权限提示之前运行，可以：
 COMMAND=$(cat | jq -r '.tool_input.command // empty')
 
 if echo "$COMMAND" | grep -qE 'rm\s+(-[rf]+\s+)*(\/|~|\.\.\/)'; then
-echo "BLOCKED: rm on sensitive path"
-exit 2 # 退出代码 2 阻止工具调用
+  echo "BLOCKED: rm on sensitive path"
+  exit 2 # 退出代码 2 阻止工具调用
 fi
+
 exit 0 # 允许继续
+```
 
 > **重要： **跳过提示不会绕过权限规则。Deny 和 ask 规则在 hook 返回 "allow" 后仍会被评估。阻止 hook 以退出代码 2 退出时，在权限规则被评估之前停止工具调用。
 
