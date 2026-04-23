@@ -805,7 +805,7 @@ src/
 
 在 Monorepo 中，可以在仓库根目录放一个全局 `CLAUDE.md`，每个子包目录下再放各自的 `CLAUDE.md`。Claude 打开某个子包的文件时，会同时加载根目录和该子包目录下的两个文件：
 
-~~~
+```text
 my-monorepo/
 ├── CLAUDE.md                  ← 全局规范：共用命令、整体架构、通用约定
 ├── packages/
@@ -817,9 +817,9 @@ my-monorepo/
 │       └── CLAUDE.md          ← 共享包：导出规则、版本管理约定
 └── tools/
     └── CLAUDE.md              ← 工具脚本：特殊说明和使用限制
-~~~
+```
 
-~~~
+```md
 # My Monorepo
 
 使用 pnpm workspace 管理的前后端一体化项目。
@@ -838,7 +838,7 @@ pnpm --filter web dev # 只启动 web 包的开发服务器
 - `web` 和 `api` 都依赖 `shared`
 - 禁止 `shared` 依赖 `web` 或 `api`（防止循环依赖）
 - 跨包引用使用包名（如 `@my-app/shared`），不要使用相对路径
-~~~
+```
 
 ---
 
