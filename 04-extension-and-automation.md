@@ -628,14 +628,15 @@ Never run INSERT, UPDATE, DELETE, DROP, or any DDL statements.
 
 ### 实例
 
+```json
 {
-"subagents": {
-"deny": ["explore", "plan"] // 禁用 explore 和 plan 内置代理
-// 禁用后 Claude 不会自动调用它们，但你仍可手动显式调用
+  "subagents": {
+    "deny": ["explore", "plan"]
+  }
 }
-}
+```
 
----
+禁用后 Claude 不会自动调用它们，但你仍可手动显式调用。
 
 ### 如何调用子代理
 
