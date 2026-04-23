@@ -786,11 +786,13 @@ claude --permission-mode plan -p "分析认证系统并提出改进建议"
 
 ### 实例
 
+```json
 {
-"permissions": {
-"defaultMode": "plan"
+  "permissions": {
+    "defaultMode": "plan"
+  }
 }
-}
+```
 
 ---
 
