@@ -9,7 +9,6 @@
 - Claude Code 安装与使用
 - Claude Code 如何工作
 - Claude Code API 配置
-- Coding Plan
 - Claude Code 第一次使用
 
 ---
