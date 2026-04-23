@@ -879,12 +879,14 @@ claude --permission-mode plan -p "分析认证系统并提出改进建议"
 
 ### 实例
 
+```json
 {
-"hooks": {
-"WorktreeCreate": "./scripts/create-worktree.sh",
-"WorktreeRemove": "./scripts/remove-worktree.sh"
+  "hooks": {
+    "WorktreeCreate": "./scripts/create-worktree.sh",
+    "WorktreeRemove": "./scripts/remove-worktree.sh"
+  }
 }
-}
+```
 
 这些钩子替换默认的 git 行为。使用钩子脚本时，在脚本内部复制本地配置文件，而不是使用 `.worktreeinclude`。
 
