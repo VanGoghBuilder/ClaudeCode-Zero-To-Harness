@@ -838,7 +838,7 @@ pnpm --filter web dev # 只启动 web 包的开发服务器
 - `web` 和 `api` 都依赖 `shared`
 - 禁止 `shared` 依赖 `web` 或 `api`（防止循环依赖）
 - 跨包引用使用包名（如 `@my-app/shared`），不要使用相对路径
-```
+~~~
 
 ---
 
