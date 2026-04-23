@@ -2161,11 +2161,16 @@ def _internal_get_discount(user_score):
 
 ![image](https://www.runoob.com/wp-content/uploads/2026/01/00814d49-4942-45b4-87e7-c14d682a7af5.png)
 
-**安装指定技能集的步骤： **
+**安装指定技能集的步骤：**
 - 浏览并安装插件（Browse and install plugins）
 - 选择 anthropic-agent-skills 插件源
-- 选择 document-skills（文档技能） 或 example-skills（示例技能）![image](https://www.runoob.com/wp-content/uploads/2026/01/8c5a3a09-2943-49e0-b073-aa5385826510.png)
-- 点击立即安装（Install now）![image](https://www.runoob.com/wp-content/uploads/2026/01/45288835-7200-48a8-90f0-b9ce408a059d.png)
+- 选择 document-skills（文档技能）或 example-skills（示例技能）
+
+![image](https://www.runoob.com/wp-content/uploads/2026/01/8c5a3a09-2943-49e0-b073-aa5385826510.png)
+
+- 点击立即安装（Install now）
+
+![image](https://www.runoob.com/wp-content/uploads/2026/01/45288835-7200-48a8-90f0-b9ce408a059d.png)
 
 我们也可直接通过命令安装上述两类插件：
 
@@ -2174,7 +2179,7 @@ def _internal_get_discount(user_score):
 /plugin install example-skills@anthropic-agent-skills
 ~~~
 
-**注意： **使用插件安装的 skills 目录在 ～/claude/plugins/marketplaces/ 下。
+**注意：** 使用插件安装的 skills 目录在 `~/.claude/plugins/marketplaces/` 下。
 
 插件安装完成后，需要重启一下 Claude Code。
 
