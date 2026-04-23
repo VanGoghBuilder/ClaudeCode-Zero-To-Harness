@@ -1277,35 +1277,39 @@ jq -r '"\(.tool_input.command) - \(.tool_input.description // "无描述信息")
 
 1. 再次输入 `/hooks` 命令，可查看已配置的钩子列表
 2. 或直接打开配置文件 `~/.claude/settings.json`，会看到如下配置内容：
-  ~~~
-  {
-    "hooks": {
-      "PreToolUse": [
-        {
-          "matcher": "Bash",
-          "hooks": [
-            {
-              "type": "command",
-              "command": "jq -r '\"\\(.tool_input.command) - \\(.tool_input.description // \"无描述信息\")\"' >> ~/.claude/bash-command-log.txt"
-            }
-          ]
-        }
-      ]
-    }
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '\"\\(.tool_input.command) - \\(.tool_input.description // \"无描述信息\")\"' >> ~/.claude/bash-command-log.txt"
+          }
+        ]
+      }
+    ]
   }
-  ~~~
+}
+```
 
 #### 步骤 6：测试钩子效果
 
 1. 在 Claude Code 中输入指令：`帮我执行 ls 命令`
 2. 执行完成后，在终端中查看日志文件：
-  ~~~
-  cat ~/.claude/bash-command-log.txt
-  ~~~
+
+```bash
+cat ~/.claude/bash-command-log.txt
+```
+
 3. 若日志中出现如下内容，说明钩子配置成功：
-  ~~~
-  ls - Lists files and directories
-  ~~~
+
+```text
+ls - Lists files and directories
+```
 
 ---
 
