@@ -437,9 +437,9 @@ Skills 是更高级的 **复合工作流**。当 Claude 判断某个任务适合
 按 CVSS 评分排列，高危问题优先展示。
 ~~~
 
-> **⚡ Skills vs Commands 的区别： **
-> - **Commands** 需要用户主动输入斜杠命令触发，是"工具箱"
-> - **Skills** 由 Claude 根据上下文自动判断是否调用，是"智能本能"
+> **⚡ Skills vs Commands 的区别：**
+> - **Commands** 需要用户主动输入斜杠命令触发，是“工具箱”
+> - **Skills** 由 Claude 根据上下文自动判断是否调用，是“智能本能”
 
 ![image](https://www.runoob.com/wp-content/uploads/2026/03/claude-code-project-runoob-6.svg)
 
