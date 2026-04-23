@@ -616,7 +616,6 @@ touch CLAUDE.md
 `CLAUDE.md` 是一个普通的 Markdown 文件，没有强制的格式要求，但良好的结构能帮助 Claude 更快找到关键信息。以下是推荐的内容结构：
 
 ~~~
-
 # 项目名称
 
 一句话说明这个项目是什么，方便 Claude 快速定位项目性质。
@@ -632,8 +631,7 @@ touch CLAUDE.md
 
 ### 开发
 
-```
-bash
+```bash
 uv run uvicorn main:app --reload   # 启动开发服务器
 uv run pytest                       # 运行所有测试
 uv run pytest -k "test_auth"        # 运行指定测试
@@ -641,8 +639,7 @@ uv run pytest -k "test_auth"        # 运行指定测试
 
 ### 代码检查
 
-```
-bash
+```bash
 uv run ruff check .                 # 代码检查
 uv run ruff format .                # 代码格式化
 ```
