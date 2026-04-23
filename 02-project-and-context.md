@@ -2097,22 +2097,24 @@ Claude Code 的设置按以下优先级生效（从高到低）：
 
 ### 实例
 
+```json
 {
-"permissions": {
-"defaultMode": "dontAsk",
-"allow": [
-"Read(*)", // 允许读取所有文件
-"Bash(npm run build *)", // 允许构建命令
-"Bash(npm test *)" // 允许运行测试
-],
-"deny": [
-"Edit(*)", // 禁止所有文件编辑
-"Bash(git *)", // 禁止所有 git 操作
-"Bash(curl *)", // 禁止网络请求
-"Bash(ssh *)" // 禁止 SSH 连接
-]
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(*)",
+      "Bash(npm run build *)",
+      "Bash(npm test *)"
+    ],
+    "deny": [
+      "Edit(*)",
+      "Bash(git *)",
+      "Bash(curl *)",
+      "Bash(ssh *)"
+    ]
+  }
 }
-}
+```
 
 #### 示例四：允许多项目访问
 
