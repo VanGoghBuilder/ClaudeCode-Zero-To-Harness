@@ -819,7 +819,7 @@ my-monorepo/
     └── CLAUDE.md              ← 工具脚本：特殊说明和使用限制
 ```
 
-```md
+~~~md
 # My Monorepo
 
 使用 pnpm workspace 管理的前后端一体化项目。
