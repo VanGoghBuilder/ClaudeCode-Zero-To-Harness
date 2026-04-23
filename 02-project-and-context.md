@@ -674,20 +674,17 @@ uv run ruff format .                # 代码格式化
 这是 `CLAUDE.md` 中 **最高频被参考**的部分。Claude 在执行测试、构建、代码检查等任务时，会优先查找这里定义的命令，避免猜测或使用错误的命令：
 
 ~~~
-
 ## 常用命令
 
 ### 安装依赖
 
-```
-bash
+```bash
 npm ci                    # 安装依赖（CI 环境使用，严格按 lock 文件安装）
 ```
 
 ### 开发
 
-```
-bash
+```bash
 npm run dev               # 启动开发服务器（端口 3000）
 npm run build             # 构建生产版本
 npm run preview           # 预览生产构建
@@ -695,8 +692,7 @@ npm run preview           # 预览生产构建
 
 ### 测试
 
-```
-bash
+```bash
 npm test                  # 运行所有测试
 npm test -- --watch       # 监听模式
 npm test -- --coverage    # 生成覆盖率报告
@@ -704,13 +700,11 @@ npm test -- --coverage    # 生成覆盖率报告
 
 ### 代码质量
 
-```
-bash
+```bash
 npm run lint              # ESLint 检查
 npm run lint:fix          # 自动修复可修复的问题
 npm run typecheck         # TypeScript 类型检查
 ```
-
 ~~~
 
 #### 2、项目结构说明
@@ -718,10 +712,9 @@ npm run typecheck         # TypeScript 类型检查
 帮助 Claude 快速定位文件，减少不必要的目录扫描，尤其在大型项目中效果明显：
 
 ~~~
-
 ## 项目结构
 
-```
+```text
 src/
 ├── app/                  # Next.js App Router 页面
 │   ├── (auth)/           # 需要登录才能访问的页面组
