@@ -1121,7 +1121,7 @@ echo $env:ANTHROPIC_MODEL
 
 ### 智谱大模型接入 Claude Code
 
-这部分我们使用 ~/.claude/settings.json 文件来配置大模型，开始前需要到官方平台获取 API key：[GLM Coding Plan](https://www.bigmodel.cn/claude-code?ic=EMWK7IPUCE)。
+这部分我们使用 ~/.claude/settings.json 文件来配置大模型，开始前需要到官方平台获取 API key。
 编辑或新增 Claude Code 配置文件 ~/.claude/settings.json，新增或修改里面的 env 字段：
 
 ~~~
