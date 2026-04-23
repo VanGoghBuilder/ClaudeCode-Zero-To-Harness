@@ -2580,9 +2580,9 @@ Claude Code 的 Chrome 集成功能，让你可以直接从命令行（CLI）或
 
 #### 安装步骤
 
-**1. 安装浏览器扩展**：
+**1. 安装浏览器扩展：**
 - 打开 Chrome/Edge，访问 [Chrome Web Store - Claude](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn)。
-- 点击"添加至 Chrome"并安装。
+- 点击“添加至 Chrome”并安装。
 - 安装后建议重启浏览器，确保 Native Messaging Host 正确加载。
 
 ![image](https://www.runoob.com/wp-content/uploads/2026/03/8f9ff3fd-6d17-4058-9e37-97cbc03445a3.png)
