@@ -2054,11 +2054,13 @@ Claude Code 的设置按以下优先级生效（从高到低）：
 
 ### 实例
 
+```json
 {
-"permissions": {
-"defaultMode": "default"
+  "permissions": {
+    "defaultMode": "default"
+  }
 }
-}
+```
 
 #### 示例二：开发常用配置（读操作放开，命令执行审批）
 
