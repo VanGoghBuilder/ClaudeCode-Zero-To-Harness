@@ -1648,30 +1648,24 @@ hooks:
 
 ##### 完整配置示例
 
-~~~
-
+```yaml
 ---
-
 # Agent 的基础信息
-
 name: code-reviewer
 description: 自动审查代码修改并运行代码检查的子代理
 
 # Hooks 配置段
-
 hooks:
   PostToolUse:
 
-# 匹配器：拦截Edit（编辑）或Write（写入）工具
-
-```yaml
-hooks:
+  # 匹配器：拦截 Edit（编辑）或 Write（写入）工具
   PreToolUse:
     - matcher: "Edit|Write"
       hooks:
         - type: "command"
           command: "./scripts/run-linter.sh"
           timeout: 30
+---
 ```
 
 **注意事项：**
