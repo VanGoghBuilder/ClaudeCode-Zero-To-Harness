@@ -931,7 +931,7 @@ Claude 读取 `CLAUDE.md` 时会自动加载引用的文件内容：
 
 ### 实例
 
-~~~
+```md
 # MyApp — 电商管理后台
 
 基于 Next.js 14 App Router + Prisma + PostgreSQL 的电商管理系统。
@@ -978,7 +978,7 @@ pnpm lint && pnpm typecheck # 代码检查和类型检查
 - `.env.local` 包含真实密钥， **禁止读取或输出文件内容**
 - `src/lib/auth.ts` 是认证核心文件， **修改前必须告知我**
 - 修改 `prisma/schema.prisma` 后必须执行 `pnpm db:migrate` 并提交迁移文件
-~~~
+```
 
 ### 常见问题
 
