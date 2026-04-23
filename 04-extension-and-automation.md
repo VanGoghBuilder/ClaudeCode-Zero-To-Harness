@@ -2620,9 +2620,10 @@ Claude Code 的 Chrome 集成功能，让你可以直接从命令行（CLI）或
 #### 在 VS Code 中使用
 
 - 在提示框中输入 `@browser` + 你的指令，例如：
-  ~~~
+
+  ```text
   @browser 打开 localhost:3000，检查控制台是否有错误
-  ~~~
+  ```
 
 #### 检查连接状态
 
