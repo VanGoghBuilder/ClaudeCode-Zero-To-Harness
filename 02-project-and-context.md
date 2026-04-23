@@ -1707,15 +1707,17 @@ claude --permission-mode bypassPermissions
 
 ### 实例
 
+```json
 {
-"permissions": {
-"allow": [
-"Bash(npm run build)", // 匹配确切的命令
-"Read(./.env)", // 匹配读取当前目录中的 .env 文件
-"WebFetch(domain:example.com)" // 匹配对 example.com 的获取请求
-]
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Read(./.env)",
+      "WebFetch(domain:example.com)"
+    ]
+  }
 }
-}
+```
 
 #### 4、通配符模式
 
