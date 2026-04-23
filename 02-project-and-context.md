@@ -820,15 +820,13 @@ my-monorepo/
 ~~~
 
 ~~~
-
 # My Monorepo
 
 使用 pnpm workspace 管理的前后端一体化项目。
 
 ## 全局命令
 
-```
-bash
+```bash
 pnpm install          # 安装所有包的依赖
 pnpm -r build         # 构建所有包
 pnpm -r test          # 运行所有包的测试
@@ -846,10 +844,11 @@ pnpm --filter web dev # 只启动 web 包的开发服务器
 
 ### 用 @ 语法引用外部文件
 
-当项目已经有了规范文档（如 API 设计规范、数据库设计文档等），不需要将内容复制到 `CLAUDE.md` 中，直接用 `@文件路径` 引用即可。~~~
-Claude 读取 <code>CLAUDE.md</code> 时会自动加载引用的文件内容：</p>
-<pre>
+当项目已经有了规范文档（如 API 设计规范、数据库设计文档等），不需要将内容复制到 `CLAUDE.md` 中，直接用 `@文件路径` 引用即可。
 
+Claude 读取 `CLAUDE.md` 时会自动加载引用的文件内容：
+
+~~~
 ## 规范文档
 
 详细的 API 设计规范请参考：
