@@ -207,10 +207,9 @@ your-project/
 
 CLAUDE.md 放置在项目根目录，所有团队成员共享，它告诉 Claude：这个项目是什么、如何运行、有什么约定。
 
-**典型内容： **
+**典型内容：**
 
 ~~~
-
 # My Project
 
 一句话描述项目用途。
@@ -223,9 +222,9 @@ CLAUDE.md 放置在项目根目录，所有团队成员共享，它告诉 Claude
 
 ## Common Commands
 
-\`npm run dev\`    # 启动开发服务器
-\`pytest tests/\`  # 运行测试
-\`npm run build\`  # 构建生产版本
+`npm run dev`    # 启动开发服务器
+`pytest tests/`  # 运行测试
+`npm run build`  # 构建生产版本
 
 ## Code Conventions
 
@@ -241,7 +240,7 @@ src/
 └── models/     # 数据模型层
 ~~~
 
-> **💡 提示： ** Claude 会自动递归读取父目录中的 CLAUDE.md。在 monorepo 中，子包内可再放一个 CLAUDE.md，Claude 会将两层指令合并理解。
+> **💡 提示：** Claude 会自动递归读取父目录中的 CLAUDE.md。在 monorepo 中，子包内可再放一个 CLAUDE.md，Claude 会将两层指令合并理解。
 
 #### CLAUDE.local.md
 
