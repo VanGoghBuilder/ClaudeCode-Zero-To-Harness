@@ -1827,7 +1827,7 @@ Agent Skills 的本质不是工具，而是：
 
 Skills 基础内容参考：[Skills 教程](https://www.runoob.com/ai-agent/skills-agent.html)
 
-**核心形式： **
+**核心形式：**
 - 一个 Skill 就是一个文件夹，里面必须有一个 SKILL.md 文件（包含说明和元数据），可选其他资源文件（如脚本、示例、参考文档）。
 - Skill 是一个 Markdown 文件（SKILL.md），用于教 Claude 在特定场景下按你的方式做事。
 - 本质是其实就是相当于给 AI 代理发放一本专业手册，AI 不会每次都从零学习，而是根据任务自动调用手册中的知识。
