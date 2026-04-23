@@ -2068,26 +2068,28 @@ Claude Code 的设置按以下优先级生效（从高到低）：
 
 ### 实例
 
+```json
 {
-"permissions": {
-"defaultMode": "acceptEdits",
-"allow": [
-"Bash(git status *)", // 查看 git 状态
-"Bash(git log *)", // 查看 git 日志
-"Bash(git diff *)", // 查看 git 差异
-"Bash(npm run *)", // 运行 npm 脚本
-"Bash(npm test *)", // 运行测试
-"Bash(ls *)", // 列出目录
-"Bash(grep *)" // 搜索内容
-],
-"deny": [
-"Bash(rm *)", // 删除文件：直接阻止
-"Bash(git push *)", // 推送代码：直接阻止
-"Bash(mkdir / *)", // 创建系统目录：直接阻止
-"Edit(*.env)" // 阻止编辑 .env 文件
-]
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(npm run *)",
+      "Bash(npm test *)",
+      "Bash(ls *)",
+      "Bash(grep *)"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(git push *)",
+      "Bash(mkdir / *)",
+      "Edit(*.env)"
+    ]
+  }
 }
-}
+```
 
 #### 示例三：锁定环境配置（仅允许预批准操作）
 
