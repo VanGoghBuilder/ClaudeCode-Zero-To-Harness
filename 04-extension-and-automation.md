@@ -975,7 +975,7 @@ claude --plugin-dir ./plugin-a --plugin-dir ./plugin-b
 - Slack / Figma
 - Vercel / Supabase
 
-> 本质： **插件 = MCP 服务器 + 配置**
+> 本质：** 插件 = MCP 服务器 + 配置
 
 #### 3、开发工作流
 
