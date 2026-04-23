@@ -1028,14 +1028,11 @@ claude --model deepseek-chat
 阿里云百炼的通义千问系列模型支持 Anthropic API 兼容接口，通过修改以下参数，即可在 Claude Code 中调用通义千问系列模型。
 - ANTHROPIC_API_KEY（或 ANTHROPIC_AUTH_TOKEN）：替换为百炼 API Key，申请地址：[https://bailian.console.aliyun.com/cn-beijing/?tab=model#/api-key](https://bailian.console.aliyun.com/cn-beijing/?userCode=i5mn5r7m&tab=model#/api-key)。
 - ANTHROPIC_BASE_URL：替换为百炼的兼容端点地址 https://dashscope.aliyuncs.com/apps/anthropic。
-
-可以直接购买资源包，这样用起来更划算：[https://cn.aliyun.com/benefit?from_alibabacloud=&userCode;=i5mn5r7m](https://cn.aliyun.com/benefit?from_alibabacloud=&userCode=i5mn5r7m)
 - 模型名称：替换为百炼支持的模型名称（例如 qwen3-max、qwen3-coder-plus等）
-- 百炼的 Coding Plan 套餐：[https://www.aliyun.com/benefit/scene/codingplan](https://www.aliyun.com/benefit/scene/codingplan?source=5176.29345612&userCode=i5mn5r7m)
 
 > **兼容 Anthropic API 协议：**
-> - Base URL：https://coding.dashscope.aliyuncs.com/apps/anthropic
-> - API Key：填入 Coding Plan 套餐专属 API Key
+> - Base URL：https://dashscope.aliyuncs.com/apps/anthropic
+> - API Key：填入百炼 API Key
 > - Model：qwen3-coder-plus
 
 **macOS/Linux：**
@@ -1047,13 +1044,13 @@ claude --model deepseek-chat
 vim ~/.claude/settings.json
 ~~~
 
-将 YOUR_API_KEY 替换为 Coding Plan 套餐专属 API Key。
+将 YOUR_API_KEY 替换为百炼 API Key。
 
 ~~~
 {
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY",
-    "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
+    "ANTHROPIC_BASE_URL": "https://dashscope.aliyuncs.com/apps/anthropic",
     "ANTHROPIC_MODEL": "qwen3-coder-plus"
   }
 }
