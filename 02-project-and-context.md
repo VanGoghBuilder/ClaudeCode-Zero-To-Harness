@@ -980,7 +980,7 @@ pnpm lint && pnpm typecheck # 代码检查和类型检查
 - 修改 `prisma/schema.prisma` 后必须执行 `pnpm db:migrate` 并提交迁移文件
 ~~~
 
-**Q：CLAUDE.md 里的规则 Claude 不遵守怎么办？**
+### 常见问题
 首先检查规则的表述是否足够明确（见上方“用命令式语言”的建议）。如果表述已经很明确但仍不遵守，可以在具体的对话中再次强调，或者将该规则放到文件靠前的位置——Claude 对文件前半部分的内容注意力更高。
 
 **Q：CLAUDE.md 越长越好吗？**
