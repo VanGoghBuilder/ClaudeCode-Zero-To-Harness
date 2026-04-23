@@ -599,18 +599,26 @@ export CLAUDE_CODE_SUBAGENT_MODEL="claude-sonnet-4-6"
 
 ### 实例
 
----name:db-analystdescription:Read-only database analysis agent. Use for querying and reporting, never for writes.tools:Bash
-
-# 在 .claude/settings.json 中配置钩子：
-
-# PreToolUse on Bash -> validate-readonly-query.sh
-
-# 脚本检测到非 SELECT 操作时以退出码 2 返回，阻止该命令执行
-
+```yaml
 ---
+name: db-analyst
+description: Read-only database analysis agent. Use for querying and reporting, never for writes.
+tools: Bash
+---
+```
 
+在 `.claude/settings.json` 中再配合钩子限制 Bash 只能执行只读查询：
+
+```text
+PreToolUse on Bash -> validate-readonly-query.sh
+```
+
+如果脚本检测到非 `SELECT` 操作，则以退出码 2 返回并阻止该命令执行。
+
+```text
 You are a database analyst. Only run SELECT queries.
 Never run INSERT, UPDATE, DELETE, DROP, or any DDL statements.
+```
 
 ---
 
