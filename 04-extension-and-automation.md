@@ -2601,17 +2601,21 @@ Claude Code 的 Chrome 集成功能，让你可以直接从命令行（CLI）或
 ##### 在 CLI 中启动
 
 - **推荐方式**：直接带 Chrome 启动
-  ~~~
+
+  ```bash
   claude --chrome
-  ~~~
+  ```
+
 - 或在已有会话中启用：
 
-然后选择启用或重新连接。
-  ~~~
+  ```text
   /chrome
-  ~~~
+  ```
+
+  然后选择启用或重新连接。
+
 - **设为默认**（方便但会增加上下文消耗）：
-在 `/chrome` 菜单中选择 "Enabled by default"。
+  在 `/chrome` 菜单中选择 "Enabled by default"。
 
 #### 在 VS Code 中使用
 
