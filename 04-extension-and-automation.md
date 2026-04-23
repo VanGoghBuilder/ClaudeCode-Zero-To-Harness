@@ -1970,8 +1970,8 @@ $ARGUMENTS
 #### SKILL.md 文件的核心构成
 
 以 Claude 的 PDF 文档编辑技能为例，Claude 原生可解析 PDF，但无法直接操作（如填写表单），该技能补足了这一短板。
-- **核心形态： **一个包含 SKILL.md 的目录
-- **必填元数据： **SKILL.md 开头的 YAML 块，需包含 name（名称）和 description（描述），启动时预加载至系统提示词
+**核心形态：** 一个包含 SKILL.md 的目录
+- **必填元数据：** SKILL.md 开头的 YAML 块，需包含 name（名称）和 description（描述），启动时预加载至系统提示词
 
 ![image](https://www.runoob.com/wp-content/uploads/2026/01/6f22d8913dbc6228e7f11a41e0b3c124d817b6d2-1650x929-1.webp)
 
