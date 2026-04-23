@@ -1240,7 +1240,7 @@ jobs:
 
 #### 升级前后对比
 
-**Beta 版本： **
+**Beta 版本：**
 
 ~~~
 - uses: anthropics/claude-code-action@beta
@@ -1253,7 +1253,7 @@ jobs:
     model: "claude-sonnet-4-6"
 ~~~
 
-**GA 版本 (v1.0)： **
+**GA 版本 (v1.0)：**
 
 ~~~
 - uses: anthropics/claude-code-action@v1
