@@ -254,11 +254,14 @@ your-project/
 
 - [扩展、自动化与高级能力](./04-extension-and-automation.md)
 - [参考、环境与工程集成](./05-reference-and-ops.md)
+- [Claude Code Best Practices 中文版](../claude-code-best-practices/README.md)
 
 再完成：
 
 - 增加 `code-reviewer`、`test-runner` 等子代理
 - 把高频流程做成 slash commands 或固定脚本
+
+社区 best-practices 仓库里的 `/commit`、`/issue`、`/reviewpr`、`/test` 和专用 agents 更适合作为这一阶段的案例库：先理解它们解决的流程问题，再按你自己的项目边界改写成更小、更稳定的本地命令。
 
 ### Phase 4：按需接入外部系统
 
