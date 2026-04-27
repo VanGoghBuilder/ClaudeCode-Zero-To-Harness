@@ -12,11 +12,12 @@
 
 这篇适合作为入口：先建立对 Claude Code 的正确使用直觉，再过渡到项目上下文和最小可行 harness。
 
-### 2. 方法论总纲
+### 2. 方法论与实践
 
 - [Claude Code 的 Harness Engineering 总纲](06-harness-engineering-guide.md)
+- [长时间应用开发的 Harness 设计](07-long-running-app-harness.md)
 
-这篇承担全局收束作用：把 Claude Code 的日常使用、上下文管理、自动化和工程化控制整合成一套 Harness Engineering 框架。
+这两篇承担全局收束和实践延展作用：前者把 Claude Code 的日常使用、上下文管理、自动化和工程化控制整合成一套 Harness Engineering 框架；后者把长时间应用开发中的 planner / generator / evaluator、上下文交接和评估回路落到实操流程里。
 
 ### 3. Claude Code 教程主线
 
