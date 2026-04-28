@@ -46,6 +46,8 @@ cp guide/skills/init-project-best-practices/SKILL.md \
   .claude/skills/init-project-best-practices/SKILL.md
 ```
 
+在独立发布仓库中，先把 `skills/init-project-best-practices/SKILL.md` 下载或复制到目标项目，再保持相同的目标目录结构。
+
 如果你是从独立发布仓库复制文件，确保最终结构是：
 
 ```text
