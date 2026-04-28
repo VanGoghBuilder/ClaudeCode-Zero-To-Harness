@@ -481,6 +481,35 @@ Claude Code 深度集成了 Git 功能，可以用自然语言完成几乎所有
 
 ---
 
+### 团队级 Git 模板
+
+如果希望 Claude Code 生成的 commit 和 PR 更稳定，不要只在对话里反复提醒“写规范一点”，而是把规则放进版本化模板：
+
+| 模板 | 推荐位置 | 用途 |
+| --- | --- | --- |
+| commit message 模板 | `.gitmessage` | 固定 commit 类型、issue 编号、描述格式和示例 |
+| commit 约定说明 | `.github/COMMIT_CONVENTION.md` | 说明原子化 commit、拆分原则和消息风格 |
+| PR 模板 | `.github/pull_request_template.md` | 固定 Summary、Test plan、Key changes、Verification 和 issue 关联 |
+
+最小接入方式：
+
+```bash
+git config commit.template .gitmessage
+```
+
+推荐写进模板的规则：
+
+- 每个 commit 只服务一个逻辑目的
+- 大型变更按功能、修复、重构、文档或配置拆分
+- commit message 使用现在时、祈使语气
+- 不添加 `Generated with Claude Code`、作者信息等额外尾巴
+- PR 描述必须列出关键变更、测试计划和验证命令
+- 能关联 issue 时使用 `Closes #123` 或团队约定格式
+
+把这些规则放进仓库后，`/commit`、`/issue`、`/reviewpr` 等命令就能读取同一套标准，减少每次交互里的口头纠偏。
+
+---
+
 ### 基础 Git 操作
 
 #### 1、查看变更
