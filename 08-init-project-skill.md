@@ -36,7 +36,9 @@ skills/init-project-best-practices/SKILL.md
 
 ### 安装为项目级 Skill
 
-在目标项目根目录执行：
+在目标项目根目录执行。
+
+如果你是在完整工作仓库中阅读，可以直接从 `guide/skills/init-project-best-practices/SKILL.md` 复制：
 
 ```bash
 mkdir -p .claude/skills/init-project-best-practices
