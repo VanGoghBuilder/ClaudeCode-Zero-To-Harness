@@ -30,6 +30,13 @@
 
 这 5 篇构成从上手、进入项目、到扩展能力和工程集成的主阅读路径。其中 [日常使用与交互](03-daily-usage.md)、[扩展、自动化与高级能力](04-extension-and-automation.md) 和 [参考、环境与工程集成](05-reference-and-ops.md) 已吸收外部 Claude Code 最佳实践材料中的 slash commands、专用 agents 与 Git 模板经验。
 
+## 可复用 Skill 包
+
+- [init-project-best-practices Skill 使用说明](08-init-project-skill.md)
+- `skills/init-project-best-practices/SKILL.md`
+
+这个 Skill 会随 `guide/` 发布，读者可以复制到目标项目的 `.claude/skills/init-project-best-practices/SKILL.md`，让 Claude Code 按最佳实践初始化空项目，或在已有代码项目中先整理再初始化 harness。
+
 ## 适合谁
 
 - 想系统了解 Claude Code 的个人开发者
