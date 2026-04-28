@@ -16,8 +16,9 @@
 
 - [Claude Code 的 Harness Engineering 总纲](06-harness-engineering-guide.md)
 - [长时间应用开发的 Harness 设计](07-long-running-app-harness.md)
+- [init-project-best-practices Skill 使用说明](08-init-project-skill.md)
 
-这两篇承担全局收束和实践延展作用：前者把 Claude Code 的日常使用、上下文管理、自动化和工程化控制整合成一套 Harness Engineering 框架；后者把长时间应用开发中的 planner / generator / evaluator、上下文交接和评估回路落到实操流程里。
+这三篇承担全局收束、实践延展和可复用初始化能力：前者把 Claude Code 的日常使用、上下文管理、自动化和工程化控制整合成一套 Harness Engineering 框架；第二篇把长时间应用开发中的 planner / generator / evaluator、上下文交接和评估回路落到实操流程里；第三篇提供一个可安装的项目初始化 Skill，用于空项目或已有代码项目的 harness 初始化。
 
 ### 3. Claude Code 教程主线
 
