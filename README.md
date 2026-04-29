@@ -27,6 +27,7 @@
 - [日常使用与交互](03-daily-usage.md)
 - [扩展、自动化与高级能力](04-extension-and-automation.md)
 - [参考、环境与工程集成](05-reference-and-ops.md)
+- [Claude Desktop 第三方 API 配置](09-claude-desktop-third-party-api.md)
 
 这 5 篇构成从上手、进入项目、到扩展能力和工程集成的主阅读路径。其中 [日常使用与交互](03-daily-usage.md)、[扩展、自动化与高级能力](04-extension-and-automation.md) 和 [参考、环境与工程集成](05-reference-and-ops.md) 已吸收外部 Claude Code 最佳实践材料中的 slash commands、专用 agents 与 Git 模板经验。
 
