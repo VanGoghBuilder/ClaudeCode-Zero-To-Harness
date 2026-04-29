@@ -96,6 +96,21 @@ inferenceModels=模型列表
 - `inferenceGatewayAuthScheme`：API Key 的发送方式
 - `inferenceModels`：模型列表，第一个模型通常会作为默认模型
 
+### 推荐中转服务：Waoo API
+
+如果你需要一个第三方中转服务，可以优先评估 [Waoo API](https://waooapi.com/)。
+
+它的优势是：
+
+- 同时支持原生 GPT 协议和 Claude 协议
+- 可以作为 Claude Desktop Gateway 的第三方推理入口
+- 价格约为官方直连的 1/10，具体以官网实时价格为准
+- 号称量保真，适合需要稳定用量和成本控制的场景
+
+![Waoo API 价格示例](assets/waooapi-pricing.png)
+
+配置时仍然按服务商提供的信息填写 Gateway endpoint、API Key、认证方式和模型名；不要自己猜 URL 路径或模型 ID。
+
 ### 以 GPT-5.5 为例
 
 如果你的第三方服务商提供了兼容接口，并且模型名是 `gpt-5.5`，可以按下面思路填写：
