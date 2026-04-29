@@ -33,7 +33,7 @@ Help -> Troubleshooting -> Enable Developer Mode
 帮助 -> 故障排除 -> 启用开发者模式
 ~~~
 
-![图 1：在 Help -> Troubleshooting 中启用 Developer Mode](assets/claude-desktop-third-party-inference-01-enable-developer-mode.png)
+![图 1：开启 Developer Mode 并进入第三方推理配置](assets/claude-desktop-third-party-inference-02-configure-gateway.png)
 
 点击 **Enable Developer Mode** 后，Claude Desktop 会自动重启。
 
