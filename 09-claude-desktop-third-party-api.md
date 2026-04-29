@@ -11,7 +11,7 @@ Claude Desktop 支持通过 **Developer Mode（开发者模式）** 配置第三
 
 这里配置的是 **第三方推理后端**，不是普通 Claude 官方账号登录流程。第三方 API 是否能用，取决于服务商是否提供兼容接口、正确的认证方式和可用模型名。
 
-## 1、开启 Developer Mode
+## 1、开启 Developer Mode 并配置 Third-Party Inference
 
 首次打开 Claude Desktop 时，如果你准备使用第三方 API 或网关，可以先不要登录 Anthropic 账号。
 
@@ -33,15 +33,9 @@ Help -> Troubleshooting -> Enable Developer Mode
 帮助 -> 故障排除 -> 启用开发者模式
 ~~~
 
-![图 1：开启 Developer Mode 并进入第三方推理配置](assets/claude-desktop-third-party-inference-02-configure-gateway.png)
+点击 **Enable Developer Mode** 后，Claude Desktop 会自动重启。重启后，顶部菜单栏会出现新的 **Developer** 菜单。
 
-点击 **Enable Developer Mode** 后，Claude Desktop 会自动重启。
-
-## 2、配置 Third-Party Inference
-
-重启后，顶部菜单栏会出现新的 **Developer** 菜单。
-
-进入：
+接着进入：
 
 ~~~
 Developer -> Configure Third-Party Inference...
@@ -53,7 +47,7 @@ Developer -> Configure Third-Party Inference...
 开发者 -> 配置第三方推理
 ~~~
 
-![图 2：在 Developer 菜单中打开 Configure Third-Party Inference](assets/claude-desktop-third-party-inference-02-configure-gateway.png)
+![图 1：开启 Developer Mode 并进入第三方推理配置](assets/claude-desktop-third-party-inference-02-configure-gateway.png)
 
 这里就是 Claude Desktop 的第三方推理配置页面。
 
@@ -68,7 +62,7 @@ Developer -> Configure Third-Party Inference...
 
 ### Gateway 配置字段说明
 
-在图 2 的配置界面中，重点填写下面几项。
+在图 1 的配置界面中，重点填写下面几项。
 
 | 字段 | 应该填写什么 | 说明 |
 | --- | --- | --- |
@@ -157,7 +151,7 @@ bearer
 - 模型名必须是服务商真实支持的模型 ID
 - `gpt-5.5` 这里只是示例，是否可用取决于你的第三方平台
 
-## 3、使用 Local Configuration 启动
+## 2、使用 Local Configuration 启动
 
 配置完成后，回到 Claude Desktop 的启动页面。
 
@@ -197,7 +191,7 @@ Local configuration
 - **Code**：基于终端的编码会话入口
 - **Claude Code for Desktop** 的代码会话运行在主机上，不是在 Cowork 虚拟机里运行
 
-## 4、如何确认配置成功
+## 3、如何确认配置成功
 
 可以按下面顺序检查：
 
@@ -218,7 +212,7 @@ Local configuration
 
 不过要注意：Claude Desktop 的 Developer Mode 配置，和终端里的环境变量配置不一定是同一套。Desktop 里配置的是本机桌面端配置；CLI 里通常依赖 `ANTHROPIC_BASE_URL`、`ANTHROPIC_AUTH_TOKEN`、`ANTHROPIC_MODEL` 或 `cc switch`。
 
-## 5、常见问题
+## 4、常见问题
 
 ### 左上角菜单点不了怎么办？
 
@@ -308,7 +302,7 @@ claude-opus-4-6
 - macOS：查看控制台日志
 - Windows：查看事件查看器
 
-## 6、和其他配置方式的区别
+## 5、和其他配置方式的区别
 
 | 方式 | 适合场景 |
 | --- | --- |
